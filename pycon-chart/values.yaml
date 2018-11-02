@@ -5,7 +5,7 @@
 replicaCount: 3
 
 image:
-  repository: searegistry.azurecr.io/berndverst/test-k8s-deploy
+  repository: searegistry.azurecr.io/pycon-indonesia
   tag: latest
   pullPolicy: IfNotPresent
 
