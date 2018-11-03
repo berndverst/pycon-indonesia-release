@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "pycon-chart.fullname" . }}
+  name: {{ include "pycon-chart.fullname" . }}-backend
   labels:
-    app.kubernetes.io/name: {{ include "pycon-chart.name" . }}
+    app.kubernetes.io/name: {{ include "pycon-chart.name" . }}-backend
     helm.sh/chart: {{ include "pycon-chart.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "pycon-chart.name" . }}
+    app.kubernetes.io/name: {{ include "pycon-chart.name" . }}-backend
     app.kubernetes.io/instance: {{ .Release.Name }}
